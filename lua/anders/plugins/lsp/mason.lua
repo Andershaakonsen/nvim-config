@@ -28,6 +28,7 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"sumneko_lua",
 		"emmet_ls",
+		"omnisharp",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -36,6 +37,7 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
 	ensure_installed = {
 		"prettier",
+		"csharpier",
 		"stylua",
 		"eslint_d",
 	},

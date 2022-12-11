@@ -206,6 +206,16 @@ _G.packer_plugins = {
     path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["oceanic-next"] = {
+    loaded = true,
+    path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/oceanic-next",
+    url = "https://github.com/mhartington/oceanic-next"
+  },
+  ["omnisharp-vim"] = {
+    loaded = true,
+    path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/omnisharp-vim",
+    url = "https://github.com/Omnisharp/omnisharp-vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -215,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  supertab = {
+    loaded = true,
+    path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/supertab",
+    url = "https://github.com/ervandew/supertab"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -236,6 +251,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/andershakonsen/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-devicons"] = {
     loaded = true,

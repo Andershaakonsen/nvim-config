@@ -10,7 +10,6 @@ local ensure_packer = function()
 	return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
-
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
 vim.cmd([[ 
@@ -27,12 +26,26 @@ if not status then
 end
 
 return packer.startup(function(use)
+	-- Packer
 	use("wbthomason/packer.nvim")
 
-	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-	use("kaicataldo/material.vim")
-	-- vs-code like onedarkpro
+	-- use("kaicataldo/material.vim")
 	-- use("olimorris/onedarkpro.nvim")
+
+	--before
+	use("kaicataldo/material.vim")
+
+	--testing
+	use("mhartington/oceanic-next")
+
+	-- Vim game
+	use("ThePrimeagen/vim-be-good")
+
+	-- Code formatter? form omnisharp i think
+	--	use("sbdchd/neoformat")
+
+	--Csharp language server
+	use("Omnisharp/omnisharp-vim")
 
 	use("neoclide/vim-jsx-improve")
 
@@ -67,6 +80,9 @@ return packer.startup(function(use)
 
 	-- vs-code like icons
 	use("kyazdani42/nvim-web-devicons")
+
+	--supertab
+	use("ervandew/supertab")
 
 	-- vs-code like error messages
 	use({
