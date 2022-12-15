@@ -68,10 +68,14 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
---configure omnisharp server
+-- configure omnisharp server
 lspconfig["omnisharp"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	-- settings = {
+	-- 	OmniSharp_highlighting = 0,
+	-- 	enable_highlighting = false,
+	-- },
 })
 
 -- configure tailwindcss server

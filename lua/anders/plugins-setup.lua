@@ -29,20 +29,19 @@ return packer.startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 
-	-- use("kaicataldo/material.vim")
-	-- use("olimorris/onedarkpro.nvim")
-
 	--before
 	use("kaicataldo/material.vim")
+	use("https://github.com/sainnhe/edge.git")
 
 	--testing
 	use("mhartington/oceanic-next")
 
 	-- Vim game
 	use("ThePrimeagen/vim-be-good")
+	use("nvim-lua/completion-nvim")
 
 	-- Code formatter? form omnisharp i think
-	--	use("sbdchd/neoformat")
+	-- use("sbdchd/neoformat")
 
 	--Csharp language server
 	use("Omnisharp/omnisharp-vim")
@@ -52,6 +51,9 @@ return packer.startup(function(use)
 	use("xiyaowong/nvim-transparent")
 
 	use("ryanoasis/vim-devicons")
+
+	-- leap for neovim
+	use("ggandor/leap.nvim")
 
 	-- line indentation
 	use("lukas-reineke/indent-blankline.nvim")

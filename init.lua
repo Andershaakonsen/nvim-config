@@ -14,11 +14,13 @@ require("anders.plugins.lsp.null-ls")
 require("anders.plugins.autopairs")
 require("anders.plugins.treesitter")
 require("anders.plugins.gitsigns")
+require("anders.plugins.neosolarized")
+require("leap").add_default_mappings()
 -- require("anders.plugins.colorizer")
 
 -- require("transparent").setup({
 -- 	enable = true, -- boolean: enable transparent
--- 	extra_groups = { -- table/string: additional groups that should be cleared
+-- 	extra_groups = { -- table/string: additionalt groups that should be cleared
 -- 		-- In particular, when you set it to 'all', that means all available groups
 -- 		-- example of akinsho/nvim-bufferline.lua
 -- 		"BufferLineTabClose",
@@ -35,3 +37,4 @@ require("anders.plugins.gitsigns")
 -- require("packer").startup(function()
 -- 	use("lukas-reineke/indent-blankline.nvim")
 -- end)
+--
