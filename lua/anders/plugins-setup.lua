@@ -29,9 +29,10 @@ return packer.startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 
+	use("machakann/vim-highlightedyank")
 	--before
-	use("kaicataldo/material.vim")
 	use("https://github.com/sainnhe/edge.git")
+	use("folke/tokyonight.nvim")
 
 	--testing
 	use("mhartington/oceanic-next")
@@ -44,16 +45,31 @@ return packer.startup(function(use)
 	-- use("sbdchd/neoformat")
 
 	--Csharp language server
-	use("Omnisharp/omnisharp-vim")
+	-- use("Omnisharp/omnisharp-vim")
 
 	use("neoclide/vim-jsx-improve")
+
+	--Harpoon ThePrimeagen
+	use("ThePrimeagen/harpoon")
 
 	use("xiyaowong/nvim-transparent")
 
 	use("ryanoasis/vim-devicons")
 
-	-- leap for neovim
-	use("ggandor/leap.nvim")
+	--ChatGpt
+	-- use({
+	-- 	"jackMort/ChatGPT.nvim",
+	-- 	config = function()
+	-- 		require("chatgpt").setup({
+	-- 			-- optional configuration
+	-- 		})
+	-- 	end,
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- })
 
 	-- line indentation
 	use("lukas-reineke/indent-blankline.nvim")
@@ -86,6 +102,20 @@ return packer.startup(function(use)
 	--supertab
 	use("ervandew/supertab")
 
+	-- todo plugin
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
+
+	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 	-- vs-code like error messages
 	use({
 		"folke/trouble.nvim",
@@ -96,6 +126,15 @@ return packer.startup(function(use)
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
 			})
+		end,
+	})
+
+	-- startup screen
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	})
 
@@ -123,7 +162,16 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+		requires = { { "nvim-tree/nvim-web-devicons" } },
+	})
+
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 

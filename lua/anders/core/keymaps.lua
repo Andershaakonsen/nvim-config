@@ -2,6 +2,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jk", "<ESC>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -11,6 +12,17 @@ keymap.set("n", "x", '"_x')
 -- save on ctrl s
 keymap.set("i", "<C-s>", "<C-c>:update<cr>")
 keymap.set("n", "<C-s>", ":update<cr>")
+
+-- move whole blocks
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- center screen after movement
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+--greatest remap ever
+-- vim.keymap.set("x", "<leader>p", '"_DP')
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
@@ -46,7 +58,13 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>td", "<cmd>TodoQuickFix<cr>")
 
 -- Trouble error
 keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
 keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+
+--ChatGPT
+
+-- keymap.set("n", "<leader>ci", ":ChatGPTEditWithInstructions<cr>")
+-- keymap.set("n", "<leader>cc", ":ChatGPT<cr>")

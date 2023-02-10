@@ -1,0 +1,5 @@
+-- local status, lualine = pcall(require, "omnisharp")
+-- if not status then
+-- 	return
+-- end
+-- vim.g.OmniSharp_highlighting = 0

@@ -29,6 +29,7 @@ treesitter.setup({
 		"json",
 		"javascript",
 		"typescript",
+		"bash",
 		"tsx",
 		"yaml",
 		"html",
